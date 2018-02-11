@@ -82,7 +82,13 @@ public class ImageGrad extends RelativeLayout {
 //components
         image = (ImageView) findViewById(R.id.wall);
         alphaLayer = findViewById(R.id.view);
+        if(imageFile!=null) {
+            setDrawableImage(imageFile);
+        }
 
+        if(gradient!=null){
+            alphaLayer.setBackground(gradient);
+        }
         arr.recycle();
     }
 
