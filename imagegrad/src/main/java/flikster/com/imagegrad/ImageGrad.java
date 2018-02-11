@@ -1,10 +1,12 @@
 package flikster.com.imagegrad;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 /**
@@ -18,6 +20,16 @@ public class ImageGrad extends RelativeLayout{
     private AttributeSet attrs;
     private int styleAttr;
     private View view;
+
+    /** Core Components*/
+    ImageView image;
+    View alphaLayer;
+
+    /** Attributes **/
+    Drawable imageFile;
+    Drawable imagePlaceHolder;
+    Drawable imageError;
+    Drawable gradient;
 
     public ImageGrad(Context context) {
         super(context);
